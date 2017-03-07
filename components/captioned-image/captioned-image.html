@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`captioned-image`
+Image with appropriately styled captioning.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="captioned-image">
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-shadow: 10px 10px 3px #777777;
+        border: 1px solid lightgray;
+        padding:10px;
+      }
+      img {
+        max-width: 320px;
+      }
+    </style>
+    <img src="[[imgprop]]">
+    <h2>[[captionprop]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'captioned-image',
+
+      properties: {
+        captionprop: {
+          type: String,
+          value: 'This is my caption',
+        },
+        imgprop: {
+          type: String,
+          value: '',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
