@@ -12,17 +12,20 @@ Image with appropriately styled captioning.
     <style>
       :host {
         display: block;
-        box-shadow: 10px 10px 3px #777777;
+        box-shadow: 3px 3px 3px #777777;
         border: 1px solid lightgray;
-        padding:10px;
-        max-width: 320px;
+        float: var(--floatprop, left);;
+        margin-right: 10px;
       }
-      img {
-        max-width: 320px;
-      }
+    .pads{
+        margin-left: 10px;
+        margin-right: 10px;
+      } 
+     .limit {max-width:300px;}
+     .emphasized {font-style: italic;}
     </style>
-    <img src="[[imgprop]]">
-    <h2>[[captionprop]]</h2>
+    <img class="limit pads" src="[[imgprop]]">
+    <div class="limit pads emphasized">[[captionprop]]</div>
   </template>
 
   <script>
